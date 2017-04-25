@@ -6,4 +6,26 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>jar2exe-tomcat7</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.tomcat.embed</groupId>
+  		<artifactId>tomcat-embed-core</artifactId>
+  		<version>7.0.77</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.tomcat</groupId>
+  		<artifactId>tomcat-juli</artifactId>
+  		<version>7.0.77</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.tomcat</groupId>
+  		<artifactId>tomcat-jasper</artifactId>
+  		<version>7.0.77</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.eclipse.jdt.core.compiler</groupId>
+  		<artifactId>ecj</artifactId>
+  		<version>4.4.2</version>
+  	</dependency>
+  </dependencies>
 </project>
