@@ -7,5 +7,6 @@
   <modules>
   	<module>jar2exe-tomcat7</module>
   	<module>jar2exe-tomcat8</module>
+  	<module>webapp-packer</module>
   </modules>
 </project>

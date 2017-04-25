@@ -5,29 +5,7 @@
     <artifactId>webapp-solution</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>jar2exe-tomcat8</artifactId>
-  <dependencies>
-  	<dependency>
-  		<groupId>org.apache.tomcat.embed</groupId>
-  		<artifactId>tomcat-embed-core</artifactId>
-  		<version>8.0.24</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.apache.tomcat</groupId>
-  		<artifactId>tomcat-juli</artifactId>
-  		<version>8.0.24</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.apache.tomcat</groupId>
-  		<artifactId>tomcat-jasper</artifactId>
-  		<version>8.0.24</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.eclipse.jdt.core.compiler</groupId>
-  		<artifactId>ecj</artifactId>
-  		<version>4.4.2</version>
-  	</dependency>
-  </dependencies>
+  <artifactId>webapp-packer</artifactId>
   <build>
   	<plugins>
       <plugin>
@@ -39,7 +17,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>com.regexlab.j2e.starter8.HelloWebapp</mainClass>
+              <mainClass>com.regexlab.j2e.webapp.Packer</mainClass>
             </manifest>
           </archive>
         </configuration>
