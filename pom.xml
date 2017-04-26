@@ -8,5 +8,6 @@
   	<module>jar2exe-tomcat7</module>
   	<module>jar2exe-tomcat8</module>
   	<module>webapp-packer</module>
+  	<module>jar2exe-jetty9</module>
   </modules>
 </project>
