@@ -98,7 +98,7 @@ public class Packer {
 			j2ewiz_args.addAll(other_args);
 			
 			// execute
-			if(verbose) System.out.println("\nExecuting 'j2ewiz' ...");
+			if(verbose) System.out.println("\nExecuting '" + j2ewiz_path + "' ...");
 			Process j2ewiz_process = Runtime.getRuntime().exec(j2ewiz_args.toArray(new String[0]));
 			BufferedReader reader = new BufferedReader(new InputStreamReader(j2ewiz_process.getInputStream()));
 			String line = null;

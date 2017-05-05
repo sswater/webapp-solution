@@ -21,6 +21,9 @@
             <manifest>
               <mainClass>com.regexlab.j2e.webapp.Packer</mainClass>
             </manifest>
+            <manifestEntries>
+              <Class-Path>.</Class-Path>
+            </manifestEntries>
           </archive>
         </configuration>
         <executions>
