@@ -9,10 +9,10 @@ public class HelloJettyWebapp {
 
 	public static void main(String[] args) throws Exception {
 
-		Server server = new Server(8080);
+		Server server = new Server(Integer.parseInt(System.getProperty("webapp.port", "8080")));
 
 		WebAppContext webapp = new WebAppContext();
-		webapp.setContextPath("/");
+		webapp.setContextPath(System.getProperty("webapp.context.path", "/"));
 		webapp.setWar(System.getProperty("j2e.app.path"));
 		webapp.setExtractWAR(false);
 		URL webxml = Thread.currentThread().getContextClassLoader().getResource("WEB-INF/web.xml");
