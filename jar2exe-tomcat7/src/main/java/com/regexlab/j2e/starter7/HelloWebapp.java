@@ -17,11 +17,11 @@ public class HelloWebapp {
         
         // Tomcat instance
         Tomcat tomcat = new Jar2ExeTomcat();
-        tomcat.setPort(8080);
+        tomcat.setPort(Integer.parseInt(System.getProperty("webapp.port", "8080")));
         tomcat.setBaseDir(System.getProperty("java.io.tmpdir", "."));
 
         // deploy exe file self as a war file
-        Context context = tomcat.addWebapp("", System.getProperty("j2e.app.path"));
+        Context context = tomcat.addWebapp(System.getProperty("webapp.context.path", ""), System.getProperty("j2e.app.path"));
         
         // do not extract war file
         ((StandardContext)context).setUnpackWAR(false);
