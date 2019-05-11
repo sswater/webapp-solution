@@ -25,9 +25,6 @@ public class Jar2ExeWARDirContext extends WARDirContext implements DirContext {
         if (docBase == null)
             throw new IllegalArgumentException
                 (sm.getString("resources.null"));
-        if (!(docBase.endsWith(".war") || docBase.toLowerCase().endsWith(".exe"))) // modified
-            throw new IllegalArgumentException
-                (sm.getString("warResources.notWar"));
 
         // Calculate a File object referencing this document base directory
         File base = new File(docBase);

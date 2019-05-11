@@ -19,7 +19,7 @@ public class Jar2ExeStandardContext extends StandardContext implements Context {
      */
     public synchronized void setResources(DirContext resources) {
         
-        if ((getDocBase() != null) && (getDocBase().toLowerCase().endsWith(".exe")))
+        if (getDocBase() != null)
             super.setResources(new Jar2ExeWARDirContext());
         else
             super.setResources(resources);
