@@ -17,6 +17,7 @@ public class Jar2ExeTomcat extends Tomcat {
     /**
      * Copied from parent and modified
      */
+	@Override
     public Context addContext(Host host, String contextPath, String dir) {
         silence(contextPath);
         Context ctx = new Jar2ExeStandardContext(); // modified
@@ -35,6 +36,7 @@ public class Jar2ExeTomcat extends Tomcat {
     /**
      * Copied from parent and modified
      */
+	@Override
     @SuppressWarnings("deprecation")
 	public Context addWebapp(Host host, String url, String path) {
         silence(url);

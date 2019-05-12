@@ -2,7 +2,7 @@
  * Copyright (c) RegExLab.com 2013.05.15
  */
 
-package com.regexlab.j2e.tomcat8;
+package com.regexlab.j2e.tomcat8_5;
 
 import java.util.logging.*;
 
@@ -39,20 +39,23 @@ public class Jar2ExeTomcat extends Tomcat {
      * Copied from parent and modified
      */
 	@Override
-    public Context addWebapp(Host host, String contextPath, String name, String docBase) {
+    public Context addWebapp(Host host, String contextPath, String docBase,
+            LifecycleListener config) {
+
         silence(host, contextPath);
 
         Context ctx = new Jar2ExeStandardContext(); // modified // createContext(host, contextPath);
         ctx.setPath(contextPath);
         ctx.setDocBase(docBase);
-        ctx.addLifecycleListener(new DefaultWebXmlListener());
+        ctx.addLifecycleListener(getDefaultWebXmlListener());
         ctx.setConfigFile(getWebappConfigFile(docBase, contextPath));
 
-        ContextConfig ctxCfg = new ContextConfig();
-        ctx.addLifecycleListener(ctxCfg);
+        ctx.addLifecycleListener(config);
 
-        // prevent it from looking ( if it finds one - it'll have dup error )
-        ctxCfg.setDefaultWebXml(noDefaultWebXmlPath());
+        if (config instanceof ContextConfig) {
+            // prevent it from looking ( if it finds one - it'll have dup error )
+            ((ContextConfig) config).setDefaultWebXml(noDefaultWebXmlPath());
+        }
 
         if (host == null) {
             getHost().addChild(ctx);

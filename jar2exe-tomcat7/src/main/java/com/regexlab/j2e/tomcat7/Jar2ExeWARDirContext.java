@@ -19,6 +19,7 @@ public class Jar2ExeWARDirContext extends WARDirContext implements DirContext {
     /**
      * Copied from parent and modified
      */
+	@Override
     public void setDocBase(String docBase) {
 
         // Validate the format of the proposed document root

@@ -17,6 +17,7 @@ public class Jar2ExeStandardContext extends StandardContext implements Context {
     /**
      * Treat exe as a war
      */
+	@Override
     public synchronized void setResources(DirContext resources) {
         
         if (getDocBase() != null)

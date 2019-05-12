@@ -2,7 +2,7 @@
  * Copyright (c) RegExLab.com 2013.05.15
  */
 
-package com.regexlab.j2e.tomcat8;
+package com.regexlab.j2e.tomcat8_5;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.WebResourceRoot;
