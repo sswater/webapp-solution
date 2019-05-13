@@ -8,7 +8,7 @@ A simple way to pack webapp into a single standalone exe file.
 	* tomcat8-starter
 	* packer.jar
 
-2. Pre-compile your webapp and wrap into a .war file, for example `web.war`.
+2. [Pre-compile your webapp](https://github.com/sswater/webapp-cases) and wrap into a .war file, for example `web.war`.
 
 3. Make sure Jar2Exe is installed and `j2ewiz` is reachable in PATH. Right now, Jar2Exe itself only runs on Windows.
 
