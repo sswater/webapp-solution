@@ -51,6 +51,8 @@ public class Packer {
 			else if(a.toLowerCase().endsWith(".jar")) jar = a;
 			else other_args.add(a);
 		}
+		other_args.add("-config");
+		other_args.add("compatible true");
 		
 		if(war == null || jar == null) {
 			System.err.println("Please specify a .war file and a .jar file with the starter program.");
